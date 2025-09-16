@@ -1,13 +1,30 @@
 using UnityEngine;
+using TMPro;
 
-public class ScoreManager
+public class ScoreManager : MonoBehaviour
 {
-    public int scoreAmount;
+    public int score;
+    public TextMeshProUGUI scoreText;
 
-
-
-    public void IncreaseScoreText(int scoreAmount)
+    void Start()
     {
+        UpdateScoreText();
+    }
 
+    public void IncreaseScoreText(int amount)
+    {
+        score += amount;
+        UpdateScoreText();
+    }
+
+    public void DecreaseScoreText(int amount)
+    {
+        score -= amount;
+        UpdateScoreText();
+    }
+
+    public void UpdateScoreText()
+    {
+        scoreText.text = "Score: " + score;
     }
 }

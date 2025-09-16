@@ -14,7 +14,8 @@ public class Balloon : MonoBehaviour
 
 void Start()
 {
-    //scoreManager = GameObject.Find("ScoreManager").GetComponet<ScoreManager>();
+    sorceManager = GameObject.Find("ScoreManager").GetComponent("ScoreManager")
+    
 }
 
 void OnMouseDown()
@@ -23,11 +24,12 @@ void OnMouseDown()
 
     transform.localScale += Vector3.one * scaleToIncrease;
 
-    if(clickToPop == 0);
+    if(clickToPop == 0)
     {
-        //ScoreManager.IncreaseScoreText(scoreToGive);
-        //Instantlate(popEffect, transform.position, transform.rotation);
+        ScoreManager.IncreaseScoreText(scoreToGive);
+        Instantiate(popEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }
+    
 }
 }

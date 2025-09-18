@@ -14,7 +14,7 @@ public class Balloon : MonoBehaviour
 
 void Start()
 {
-    sorceManager = GameObject.Find("ScoreManager").GetComponent("ScoreManager")
+    ScoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     
 }
 

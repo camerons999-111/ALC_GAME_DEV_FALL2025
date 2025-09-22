@@ -8,13 +8,13 @@ public class Balloon : MonoBehaviour
 
     public int scoreToGive;
 
-    private ScoreManager ScoreManager;
+    private ScoreManager scoreManager;
 
     public GameObject popEffect;
 
 void Start()
 {
-    ScoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+    scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     
 }
 
@@ -26,7 +26,7 @@ void OnMouseDown()
 
     if(clickToPop == 0)
     {
-        ScoreManager.IncreaseScoreText(scoreToGive);
+        scoreManager.IncreaseScoreText(scoreToGive);
         Instantiate(popEffect, transform.position, transform.rotation);
         Destroy(gameObject);
     }

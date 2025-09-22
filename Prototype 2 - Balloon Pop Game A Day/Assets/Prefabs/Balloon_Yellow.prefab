@@ -269,6 +269,8 @@ GameObject:
   - component: {fileID: 5058186158986425760}
   - component: {fileID: 8553348974353571461}
   - component: {fileID: 5539975504952270231}
+  - component: {fileID: 1219725972726474374}
+  - component: {fileID: 2596675970393939351}
   m_Layer: 0
   m_Name: Balloon_Yellow
   m_TagString: Untagged
@@ -344,3 +346,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1219725972726474374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8908818170138736527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7cf0a8c83f5b1f4fa117567285cacdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickToPop: 1
+  scaleToIncrease: 0.1
+  scoreToGive: 4
+  popEffect: {fileID: 8022764685368521807, guid: c4ece8dabf6bfd64780ef6d2a24ed84e, type: 3}
+--- !u!114 &2596675970393939351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8908818170138736527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 170675eb70a169d40ba0d222b54f95ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  upperBound: 15
+  scoreManager: {fileID: 0}
+  balloon: {fileID: 0}
